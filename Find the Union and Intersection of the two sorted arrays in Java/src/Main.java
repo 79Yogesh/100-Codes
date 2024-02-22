@@ -1,0 +1,64 @@
+import java.util.*;
+
+
+public class Main {
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          
+		Scanner sc =new Scanner(System.in);
+		
+		int arr[] = {10,20,30,45,56};
+		int arr2[] = {10,25,30,46,56,23};
+		
+		
+		int i =0;
+		int j=0;
+		System.out.println("Union of array is :");
+		
+		while( i < arr.length && j < arr2.length) {
+			
+			if(arr[i] < arr2[j]) {
+				i++;
+			}else if(arr[i] > arr2[j]) {
+				j++;
+			}else {
+				System.out.print(arr[i]+" ");
+				i++;
+				j++;
+			}
+		}
+		
+		i =0;
+		j=0;
+		System.out.println();
+		System.out.println("intersection of array is :");
+        while( i < arr.length && j < arr2.length) {
+			
+			if(arr[i] < arr2[j]) {
+				System.out.print(arr[i] + " ");
+				i++;
+			}else if(arr[i] > arr2[j]) {
+				System.out.print(arr[i] + " ");
+				j++;
+			}else {
+				System.out.print(arr[i]+" ");
+				i++;
+				j++;
+			}
+		}
+        while (i < arr.length) {
+            System.out.print(arr[i] + " ");
+            i++;
+        }
+        while (j < arr2.length) {
+            System.out.print(arr2[j] + " ");
+            j++;
+        }
+		
+		
+		
+		
+
+}
+}
